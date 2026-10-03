@@ -1,0 +1,1503 @@
+/* =====================================================
+   IDENTIDADE VISUAL
+===================================================== */
+
+:root {
+
+  --petrol: #0f3d4c;
+  --petrol-dark: #082c37;
+
+  --petrol-light: #17586c;
+
+  --gold: #b8935a;
+  --gold-light: #d8bd8c;
+  --gold-soft: #e8dcc6;
+
+  --offwhite: #f8f6f1;
+  --white: #ffffff;
+
+  --text: #22333b;
+  --muted: #5a6b73;
+
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --header-h: 70px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+
+body {
+
+  margin: 0;
+
+  font-family: var(--sans);
+
+  color: var(--text);
+
+  background: var(--offwhite);
+
+  line-height: 1.65;
+
+  overflow-x: hidden;
+
+}
+
+
+img {
+
+  max-width: 100%;
+
+  height: auto;
+
+}
+
+
+a {
+
+  color: inherit;
+
+}
+
+
+button,
+a {
+
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+  font-family: var(--serif);
+
+  color: var(--petrol);
+
+  line-height: 1.2;
+
+  margin-top: 0;
+
+}
+
+
+h1 {
+
+  margin-bottom: 1rem;
+
+}
+
+
+h2 {
+
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+
+  margin-bottom: 1.2rem;
+
+}
+
+
+h3 {
+
+  font-size: 1.18rem;
+
+  margin-bottom: .55rem;
+
+}
+
+
+p {
+
+  margin-top: 0;
+
+}
+
+
+::selection {
+
+  background: var(--gold);
+
+  color: var(--petrol-dark);
+
+}
+
+
+:focus-visible {
+
+  outline: 3px solid var(--gold);
+
+  outline-offset: 4px;
+
+}
+
+
+/* =====================================================
+   CONTAINERS
+===================================================== */
+
+.container {
+
+  width: min(1120px, calc(100% - 2.5rem));
+
+  margin-inline: auto;
+
+}
+
+
+.narrow {
+
+  width: min(760px, calc(100% - 2.5rem));
+
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+.skip {
+
+  position: fixed;
+
+  left: -999px;
+
+  top: 0;
+
+  z-index: 999;
+
+  padding: .7rem 1rem;
+
+  background: var(--gold);
+
+  color: var(--petrol-dark);
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+}
+
+
+.skip:focus {
+
+  left: 0;
+
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: .5rem;
+
+  padding: .85rem 1.5rem;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border: 2px solid transparent;
+
+  cursor: pointer;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    color .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+.btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, .16);
+
+}
+
+
+.btn-gold {
+
+  background: var(--gold);
+
+  color: var(--petrol-dark);
+
+}
+
+
+.btn-gold:hover {
+
+  background: var(--gold-light);
+
+}
+
+
+.btn-outline {
+
+  border-color: var(--gold-soft);
+
+  color: var(--white);
+
+}
+
+
+.btn-outline:hover {
+
+  background: rgba(255, 255, 255, .1);
+
+}
+
+
+.btn-outline-dark {
+
+  border-color: var(--petrol);
+
+  color: var(--petrol);
+
+}
+
+
+.btn-outline-dark:hover {
+
+  background: var(--petrol);
+
+  color: var(--white);
+
+}
+
+
+.btn-sm {
+
+  padding: .55rem 1rem;
+
+  font-size: .9rem;
+
+}
+
+
+.actions {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .8rem;
+
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.header {
+
+  position: fixed;
+
+  inset: 0 0 auto;
+
+  height: var(--header-h);
+
+  z-index: 100;
+
+  background: rgba(8, 44, 55, .96);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+
+}
+
+
+.header-in {
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+.brand {
+
+  font-family: var(--serif);
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: 1.25rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+}
+
+
+.brand span {
+
+  color: var(--gold);
+
+}
+
+
+.menu {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.15rem;
+
+}
+
+
+.menu a:not(.btn) {
+
+  color: #dbe6ea;
+
+  text-decoration: none;
+
+  font-size: .92rem;
+
+  padding: .3rem 0;
+
+  border-bottom: 2px solid transparent;
+
+  transition:
+    color .25s ease,
+    border-color .25s ease;
+
+}
+
+
+.menu a:not(.btn):hover,
+.menu a.active {
+
+  color: var(--white);
+
+  border-color: var(--gold);
+
+}
+
+
+.burger {
+
+  display: none;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--white);
+
+  font-size: 1.5rem;
+
+  padding: .5rem;
+
+  cursor: pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding:
+    calc(var(--header-h) + 3rem)
+    0
+    4rem;
+
+  color: var(--white);
+
+  background:
+
+    radial-gradient(
+      circle at 80% 20%,
+      var(--petrol-light) 0%,
+      var(--petrol) 42%,
+      var(--petrol-dark) 100%
+    );
+
+}
+
+
+.hero-in {
+
+  display: grid;
+
+  grid-template-columns: 1.25fr 1fr;
+
+  align-items: center;
+
+  gap: 4rem;
+
+}
+
+
+.hero-text {
+
+  animation: rise .9s ease both;
+
+}
+
+
+.hero-name {
+
+  margin: 0 0 .8rem;
+
+  color: var(--gold);
+
+  font-weight: 600;
+
+  letter-spacing: .02em;
+
+}
+
+
+.hero h1 {
+
+  color: var(--white);
+
+  font-size:
+    clamp(2rem, 4.5vw, 3.3rem);
+
+  max-width: 800px;
+
+}
+
+
+.hero .sep {
+
+  color: var(--gold);
+
+  font-weight: 400;
+
+  margin-inline: .12em;
+
+}
+
+
+.lead {
+
+  max-width: 35rem;
+
+  margin-bottom: 2rem;
+
+  color: #dbe6ea;
+
+  font-size: 1.13rem;
+
+}
+
+
+/* =====================================================
+   FOTO PROFISSIONAL
+===================================================== */
+
+.photo-wrap {
+
+  position: relative;
+
+  justify-self: center;
+
+  width: min(370px, 100%);
+
+  padding: 10px;
+
+}
+
+
+/*
+   A foto enviada já possui um recorte vertical.
+   O object-fit ajuda a manter o enquadramento
+   profissional em diferentes tamanhos de tela.
+*/
+
+.professional-photo {
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  border-radius:
+    48% 48% 25% 25% /
+    30% 30% 22% 22%;
+
+  border: 2px solid var(--gold);
+
+  background: var(--white);
+
+  box-shadow:
+
+    0 25px 55px rgba(0, 0, 0, .28),
+
+    0 0 0 8px rgba(184, 147, 90, .08);
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+
+}
+
+
+.photo-wrap:hover .professional-photo {
+
+  transform: translateY(-5px);
+
+  box-shadow:
+
+    0 30px 65px rgba(0, 0, 0, .32),
+
+    0 0 0 10px rgba(184, 147, 90, .10);
+
+}
+
+
+/* =====================================================
+   ÍCONES FLUTUANTES
+===================================================== */
+
+.photo-decoration {
+
+  position: absolute;
+
+  width: 54px;
+
+  height: 54px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--petrol-dark);
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, .22);
+
+  animation: floating 5s ease-in-out infinite;
+
+}
+
+
+.decoration-one {
+
+  left: -5px;
+
+  top: 13%;
+
+}
+
+
+.decoration-two {
+
+  right: -5px;
+
+  bottom: 15%;
+
+  animation-delay: 1.5s;
+
+}
+
+
+@keyframes floating {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+  }
+
+}
+
+
+@keyframes rise {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+.section {
+
+  padding:
+    clamp(4rem, 8vw, 6.5rem)
+    0;
+
+}
+
+
+.section.alt {
+
+  background: var(--white);
+
+}
+
+
+.section-label {
+
+  display: inline-block;
+
+  margin-bottom: .7rem;
+
+  color: var(--gold);
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .12em;
+
+}
+
+
+#sobre p {
+
+  max-width: 68ch;
+
+  font-size: 1.06rem;
+
+  color: var(--text);
+
+}
+
+
+#sobre p + p {
+
+  margin-top: 1.2rem;
+
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 1.4rem;
+
+}
+
+
+.card {
+
+  padding: 1.6rem;
+
+  background: var(--offwhite);
+
+  border: 1px solid var(--gold-soft);
+
+  border-radius: 18px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+
+}
+
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: var(--gold);
+
+  box-shadow:
+    0 15px 32px rgba(15, 61, 76, .12);
+
+}
+
+
+.card > i {
+
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--gold);
+
+  font-size: 1.6rem;
+
+}
+
+
+.card p {
+
+  margin: 0;
+
+  color: var(--muted);
+
+}
+
+
+.tag-now {
+
+  display: inline-block;
+
+  margin-top: .8rem;
+
+  padding: .25rem .8rem;
+
+  border-radius: 999px;
+
+  background: var(--petrol);
+
+  color: var(--white);
+
+  font-size: .82rem;
+
+  font-weight: 600;
+
+}
+
+
+/* =====================================================
+   LINHA DO TEMPO
+===================================================== */
+
+.timeline {
+
+  list-style: none;
+
+  margin: 0;
+
+  padding:
+    0
+    0
+    0
+    1.8rem;
+
+  border-left:
+    2px solid var(--gold-soft);
+
+}
+
+
+.timeline > li {
+
+  position: relative;
+
+  padding-bottom: 2.5rem;
+
+}
+
+
+.timeline > li:last-child {
+
+  padding-bottom: 0;
+
+}
+
+
+.timeline > li::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: calc(-1.8rem - 7px);
+
+  top: .35rem;
+
+  width: 12px;
+
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  border: 2px solid var(--offwhite);
+
+  box-shadow:
+    0 0 0 2px var(--gold);
+
+}
+
+
+.date {
+
+  color: var(--gold);
+
+  font-size: .9rem;
+
+  font-weight: 700;
+
+}
+
+
+.timeline h3 {
+
+  margin: .2rem 0;
+
+}
+
+
+.org {
+
+  margin: 0 0 .5rem;
+
+  color: var(--muted);
+
+  font-weight: 500;
+
+}
+
+
+.timeline ul {
+
+  margin: 0;
+
+  padding-left: 1.1rem;
+
+}
+
+
+/* =====================================================
+   CURSOS
+===================================================== */
+
+.tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .65rem;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+.tags li {
+
+  padding: .6rem 1rem;
+
+  background: var(--white);
+
+  border: 1px solid var(--gold-soft);
+
+  border-radius: 12px;
+
+  font-size: .94rem;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    border-color .25s ease;
+
+}
+
+
+.tags li:hover {
+
+  background: var(--petrol);
+
+  border-color: var(--petrol);
+
+  color: var(--white);
+
+}
+
+
+/* =====================================================
+   HABILIDADES
+===================================================== */
+
+.skills {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: .9rem;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+.skills li {
+
+  padding: 1rem 1.2rem;
+
+  background: var(--offwhite);
+
+  border-left: 4px solid var(--gold);
+
+  border-radius:
+    0
+    12px
+    12px
+    0;
+
+  font-weight: 600;
+
+}
+
+
+/* =====================================================
+   DESTAQUE
+===================================================== */
+
+.statement {
+
+  padding:
+    clamp(4rem, 10vw, 7rem)
+    0;
+
+  text-align: center;
+
+  background: var(--petrol-dark);
+
+  border-block:
+    4px solid var(--gold);
+
+}
+
+
+.statement p {
+
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: var(--serif);
+
+  font-size:
+    clamp(1.7rem, 4.5vw, 2.8rem);
+
+  line-height: 1.3;
+
+}
+
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+.contact-list {
+
+  display: grid;
+
+  gap: .9rem;
+
+  list-style: none;
+
+  margin: 0 0 2rem;
+
+  padding: 0;
+
+}
+
+
+.contact-list li {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: .9rem;
+
+  overflow-wrap: anywhere;
+
+}
+
+
+.contact-list i {
+
+  width: 1.4rem;
+
+  color: var(--gold);
+
+  text-align: center;
+
+}
+
+
+.contact-list a {
+
+  text-decoration: none;
+
+}
+
+
+.contact-list a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.footer {
+
+  padding: 2.5rem 0;
+
+  background: var(--petrol-dark);
+
+  color: #dbe6ea;
+
+  text-align: center;
+
+}
+
+
+.footer p {
+
+  margin: .25rem 0;
+
+}
+
+
+.f-name {
+
+  color: var(--white);
+
+  font-family: var(--serif);
+
+  font-size: 1.2rem;
+
+}
+
+
+.footer a {
+
+  color: var(--gold);
+
+}
+
+
+/* =====================================================
+   ANIMAÇÃO DOS ELEMENTOS
+===================================================== */
+
+.js .reveal {
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+
+}
+
+
+.js .reveal.visible {
+
+  opacity: 1;
+
+  transform: none;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .menu {
+
+    gap: .8rem;
+
+  }
+
+  .menu a:not(.btn) {
+
+    font-size: .86rem;
+
+  }
+
+  .hero-in {
+
+    gap: 2.5rem;
+
+  }
+
+}
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .burger {
+
+    display: block;
+
+  }
+
+
+  .menu {
+
+    position: absolute;
+
+    top: var(--header-h);
+
+    left: 0;
+
+    right: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 1rem 1.5rem 1.5rem;
+
+    background: var(--petrol-dark);
+
+    box-shadow:
+      0 15px 25px rgba(0, 0, 0, .2);
+
+    text-align: center;
+
+  }
+
+
+  .menu.open {
+
+    display: flex;
+
+  }
+
+
+  .menu a:not(.btn) {
+
+    padding: .8rem 0;
+
+    font-size: 1rem;
+
+  }
+
+
+  .menu .btn {
+
+    margin-top: .8rem;
+
+  }
+
+
+  .hero {
+
+    min-height: auto;
+
+  }
+
+
+  .hero-in {
+
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    text-align: center;
+
+  }
+
+
+  .hero-text {
+
+    order: 2;
+
+  }
+
+
+  .photo-wrap {
+
+    order: 1;
+
+    width: min(310px, 78%);
+
+  }
+
+
+  .lead {
+
+    margin-inline: auto;
+
+  }
+
+
+  .actions {
+
+    justify-content: center;
+
+  }
+
+
+  .decoration-one {
+
+    left: -5px;
+
+  }
+
+
+  .decoration-two {
+
+    right: -5px;
+
+  }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .container,
+  .narrow {
+
+    width: min(100% - 2rem, 760px);
+
+  }
+
+
+  .hero {
+
+    padding:
+      calc(var(--header-h) + 2rem)
+      0
+      3rem;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+
+  }
+
+
+  .hero-name {
+
+    font-size: .95rem;
+
+  }
+
+
+  .lead {
+
+    font-size: 1rem;
+
+  }
+
+
+  .photo-wrap {
+
+    width: min(280px, 82vw);
+
+  }
+
+
+  .photo-decoration {
+
+    width: 46px;
+
+    height: 46px;
+
+    font-size: .9rem;
+
+  }
+
+
+  .decoration-one {
+
+    left: -8px;
+
+  }
+
+
+  .decoration-two {
+
+    right: -8px;
+
+  }
+
+
+  .actions {
+
+    flex-direction: column;
+
+    width: 100%;
+
+  }
+
+
+  .btn {
+
+    width: 100%;
+
+  }
+
+
+  .grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .skills {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .statement p {
+
+    font-size: 1.8rem;
+
+  }
+
+}
+
+
+/* =====================================================
+   REDUÇÃO DE MOVIMENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+
+  .js .reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+  }
+
+}
